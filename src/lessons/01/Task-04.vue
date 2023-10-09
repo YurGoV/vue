@@ -1,7 +1,7 @@
 <template>
   <!-- <button @click="increment">Рахунок: {{ count }}</button> -->
   <div style="border: 1px dotted #000; padding: 5px; min-width: 800px; min-height: 180px">
-    <form action="#" method="get">
+    <form @submit.prevent="click" action="#" method="get">
       <div>
         <p>Сума до зарахування:</p>
         <input v-model="sumToAdd" type="number" />
@@ -12,7 +12,7 @@
         <p>
           Баланс: <span :style="{ color: amountSumColor }"> {{ amount }} </span> UAH
         </p>
-        <p>{{ errorMessage }}</p>
+        <p> <span style="color: red"> {{ errorMessage }} </span> </p>
         <p>Списано відсотків за проведення операції: {{ percentages }} UAH</p>
         <p>
           Сума у доларах <span :style="{ color: usdSumColor }"> {{ sumInUsd }} USD</span>
@@ -50,6 +50,7 @@ export default {
       this.amount = this.amount + this.sumToAdd - this.percentages
       this.amountSumColor = 'green'
       this.countValutesBalances()
+      this.errorMessage = null
     },
     withdraw() {
       const percentages = (this.sumToWithdraw * 0.03).toFixed(2)
@@ -59,6 +60,7 @@ export default {
         this.amount = this.amount - this.sumToWithdraw - percentages
         this.percentages = percentages
         this.amountSumColor = 'red'
+        this.errorMessage = null
       }
       this.countValutesBalances()
     },

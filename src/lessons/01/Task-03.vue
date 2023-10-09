@@ -1,7 +1,7 @@
 <template>
   <!-- <button @click="increment">Рахунок: {{ count }}</button> -->
   <div style="border: 1px dotted #000; padding: 5px; min-width: 800px; min-height: 180px;">
-    <form action="#" method="get">
+    <form @submit.prevent='click' action="#" method="get">
       <div>
         <p>початок діапазону:</p>
         <input v-model="minNumber" type="number" />

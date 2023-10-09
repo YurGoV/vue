@@ -4,6 +4,7 @@ import Task01 from './01/Task-01.vue'
 import Task02 from './01/Task-02.vue'
 import Task03 from './01/Task-03.vue'
 import Task04 from './01/Task-04.vue'
+import Task05 from './01/Task-05.vue'
 </script>
 
 <template>
@@ -12,5 +13,6 @@ import Task04 from './01/Task-04.vue'
     <Task02 />
     <Task03 />
     <Task04 />
+    <Task05 />
   </div>
 </template>

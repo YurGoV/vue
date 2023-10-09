@@ -58,7 +58,6 @@ export default {
       }
       
       return baseImgPath + this.seasonCount + '.png'
-
     }
   }
 }
