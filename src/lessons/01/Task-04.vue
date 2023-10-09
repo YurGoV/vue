@@ -8,11 +8,13 @@
         <button @click="add">Зарахувати</button>
         <p>Сума до зняття:</p>
         <input v-model="sumToWithdraw" type="number" />
-        <button @click="withdraw">Знятии</button>
+        <button @click="withdraw">Зняти</button>
         <p>
           Баланс: <span :style="{ color: amountSumColor }"> {{ amount }} </span> UAH
         </p>
-        <p> <span style="color: red"> {{ errorMessage }} </span> </p>
+        <p>
+          <span style="color: red"> {{ errorMessage }} </span>
+        </p>
         <p>Списано відсотків за проведення операції: {{ percentages }} UAH</p>
         <p>
           Сума у доларах <span :style="{ color: usdSumColor }"> {{ sumInUsd }} USD</span>
@@ -46,23 +48,31 @@ export default {
   },
   methods: {
     add() {
-      this.percentages = (this.sumToAdd * 0.03).toFixed(2)
-      this.amount = this.amount + this.sumToAdd - this.percentages
-      this.amountSumColor = 'green'
-      this.countValutesBalances()
-      this.errorMessage = null
-    },
-    withdraw() {
-      const percentages = (this.sumToWithdraw * 0.03).toFixed(2)
-      if (this.amount - this.sumToWithdraw - percentages < 0) {
-        this.errorMessage = 'недостатньо коштів'
+      if (this.sumToAdd <= 0) {
+        this.errorMessage = 'сума має бути позитивним значенням'
       } else {
-        this.amount = this.amount - this.sumToWithdraw - percentages
-        this.percentages = percentages
-        this.amountSumColor = 'red'
+        this.percentages = (this.sumToAdd * 0.03).toFixed(2)
+        this.amount = this.amount + this.sumToAdd - this.percentages
+        this.amountSumColor = 'green'
+        this.countValutesBalances()
         this.errorMessage = null
       }
-      this.countValutesBalances()
+    },
+    withdraw() {
+      if (this.sumToWithdraw <= 0) {
+        this.errorMessage = 'сума має бути позитивним значенням'
+      } else {
+        const percentages = (this.sumToWithdraw * 0.03).toFixed(2)
+        if (this.amount - this.sumToWithdraw - percentages < 0) {
+          this.errorMessage = 'недостатньо коштів'
+        } else {
+          this.amount = this.amount - this.sumToWithdraw - percentages
+          this.percentages = percentages
+          this.amountSumColor = 'red'
+          this.errorMessage = null
+        }
+        this.countValutesBalances()
+      }
     },
     countValutesBalances() {
       this.sumInUsd = (this.amount / uahToUsd).toFixed(2)
