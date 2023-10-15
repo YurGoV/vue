@@ -4,9 +4,9 @@
     <form @submit.prevent='loginCheck' action="#" method="get">
       <div>
         <p>Логін:</p>
-        <input v-model="login" type="string" />
+        <input v-model.trim="login" type="string" />
         <p>Пароль:</p>
-        <input v-model="password" type="string" />
+        <input v-model.trim="password" type="string" />
         <button @click="loginCheck">Перевірити</button>
         <p>
           <span :style="{ color: loginResultColor }"> {{ loginResultMessage }} </span>
