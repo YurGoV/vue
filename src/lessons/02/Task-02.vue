@@ -1,5 +1,4 @@
 <template>
-  <!-- <button @click="increment">Рахунок: {{ count }}</button> -->
   <div
     class="task-section"
     :class="{
