@@ -1,5 +1,4 @@
 <template>
-  <!-- <div class="background"> -->
   <div class="task-section">
     <ul>
       <li v-for="item in jsTechnologies" :key="item.id">
@@ -31,13 +30,6 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-}
-.background {
-  display: flex;
-  padding: 5px;
-  border: 1px dotted #000;
-  min-width: 800px;
-  min-height: 180px;
 }
 img {
   display: inline-block;

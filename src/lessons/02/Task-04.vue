@@ -1,5 +1,4 @@
 <template>
-  <!-- <div class="background"> -->
   <div class="task-section">
     <ul>
       <li v-for="worker in workersList" :key="worker.id">{{ worker.name }}: {{ worker.salary }}</li>
@@ -36,12 +35,5 @@ const workersList = [
 ul {
   margin-top: auto;
   margin-bottom: auto;
-}
-.background {
-  display: flex;
-  padding: 5px;
-  border: 1px dotted #000;
-  min-width: 800px;
-  min-height: 180px;
 }
 </style>

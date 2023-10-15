@@ -1,8 +1,5 @@
 <template>
-  <!-- <button @click="increment">Рахунок: {{ count }}</button> -->
-  <!-- <div style="border: 1px dotted #000; padding: 5px; min-width: 800px; min-height: 180px"> -->
   <div class="task-section">
-    <!-- <form @submit.prevent="loginCheck" action="#" method="get"> -->
     <h1>Order a meal:</h1>
     <input v-model.trim="mealOrder" type="string" />
     <button @click="makeOrder">Make order</button>

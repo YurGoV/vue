@@ -1,5 +1,4 @@
 <template>
-  <!-- <button @click="increment">Рахунок: {{ count }}</button> -->
   <div class="task-section">
     <div class="translate-box" :class="[boxBorder]">
       <p class="translated-word">{{ wordToTranslate }}</p>
@@ -52,12 +51,6 @@ export default {
 .default-error-color {
   color: red;
 }
-/* .background { */
-/*   border: 1px dotted #000; */
-/*   padding: 5px; */
-/*   min-width: 800px; */
-/*   min-height: 180px; */
-/* } */
 .background-business {
   background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
     url('/02-business-class.png');
