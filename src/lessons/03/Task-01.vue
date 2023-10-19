@@ -1,6 +1,6 @@
 <template>
-  <div class="task-section">
-    <div style="display: flex; flex-direction: row">
+  <div class="task">
+    <div class="choise-section">
       <div class="column">
         <h2>Shops</h2>
         <ul>
@@ -25,8 +25,8 @@
         </ul>
       </div>
     </div>
-    <h1>Your order:</h1>
     <div v-if="order" class="order">
+      <h1>Your order:</h1>
       <ul>
         <li v-for="(item, key) in order" :key="key">
           <span class="shop-name"> {{ key }}: </span>
@@ -40,6 +40,7 @@
       <p>
         <span class="shop-name">Total Amount: {{ orderTotalAmount }} USD</span>
       </p>
+      <p>{{ testProp }}</p>
     </div>
   </div>
 </template>
@@ -95,7 +96,7 @@ export default {
       // TODO: there we change shopData - is in normal?
       goods.shopId = this.selectedShop
       this.orderRawData.push(goods)
-      
+
       // or, better is create a new items:
       // const orderRawItem = {...goods, shopId: this.selectShop}
       // this.orderRawData.push(orderRawItem)
@@ -103,7 +104,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 ul {
   list-style-type: none;
   padding: 0;
@@ -126,16 +127,15 @@ ul {
 .shop-item {
   padding-left: 10px;
 }
-.task-section {
+.task {
   border: 1px dotted #000;
   padding: 5px;
   min-width: 800px;
   min-height: 180px;
 }
-</style>
-<style scoped>
-.custom-error-color {
-  color: blue;
+.choise-section {
+  display: flex;
+  flex-direction: row;
 }
 .column {
   display: flex;
@@ -148,13 +148,5 @@ ul {
   flex-direction: column;
   width: 400px;
   padding: 10px;
-}
-.default-error-color {
-  color: red;
-}
-.row {
-  display: flex;
-  flex-direction: row;
-  border: 1px solid grey;
 }
 </style>
