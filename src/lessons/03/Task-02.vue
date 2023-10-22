@@ -23,7 +23,7 @@
     <div class="order">
       <ul>
         <li v-for="car in filteredCars" :key="car.id">
-          {{ getBrandById(car.brandId) }}, {{ car.manufacturedOn }} year, {{ car.price }}
+          {{ getBrandById(car.brandId) }}, {{ car.manufacturedOn }} year, {{ car.price }} USD
         </li>
       </ul>
     </div>
