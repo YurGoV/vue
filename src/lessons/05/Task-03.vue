@@ -1,29 +1,31 @@
 <template>
   <div class="task-section">
-    <div v-for="item in notebooksList" :key="item.id">
+    <div v-for="notebook in notebooksList" :key="notebook.id">
       <NotebookCard
-        :id="item.id"
-        :title="item.title"
-        :imgSrc="item.imgSrc"
-        :discount="item.discount"
-        :oldPrice="item.oldPrice"
-        :link="item.link"
-        :price="item.price"
-        :added="item.added"
+        :id="notebook.id"
+        :title="notebook.title"
+        :imgSrc="notebook.imgSrc"
+        :discount="notebook.discount"
+        :oldPrice="notebook.oldPrice"
+        :link="notebook.link"
+        :price="notebook.price"
+        :added="notebook.added"
         @addToBasket="addToBasket"
       />
     </div>
     <div v-if="basket.length">
       <h1>У вашому кошику:</h1>
-      <p v-for="item in basketList" :key="item.id">{{ item.title }}</p>
+      <p v-for="order in basketList" :key="order.id">{{ order.title }}</p>
+    </div>
+    <div v-else>
+      <h1>Кошик порожній</h1>
     </div>
   </div>
 </template>
 
 <script>
 import { notebooksList as data } from './data/3_data_notebooks'
-import NotebookCard from './components/notebookCard.vue'
-// import { raspberryList } from './data/2_data_raspberry'
+import NotebookCard from './components/03/notebookCard.vue'
 const notebooksList = data.map((notebook) => ({
   ...notebook,
   added: false
@@ -43,11 +45,9 @@ export default {
   methods: {
     addToBasket(id) {
       this.basket.push(id)
-      const notebookIndex = notebooksList.findIndex((el) => el.id === id)
+      const notebookIndex = notebooksList.findIndex((notebook) => notebook.id === id)
       console.log(notebookIndex)
       this.notebooksList[notebookIndex].added = true
-      console.log(id, 'in main section')
-      // this.$emit('addToBasket', id)
     }
   },
   computed: {
@@ -65,6 +65,7 @@ export default {
 </script>
 <style scoped>
 .task-section {
+  margin-top: 35px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

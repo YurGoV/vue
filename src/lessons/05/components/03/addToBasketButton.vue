@@ -20,14 +20,11 @@ export default {
 p {
   margin: 3px;
 }
+button:hover {
+  cursor: pointer;
+}
 button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
-}
-button {
-  margin-left: 250px;
-  background-color: lightseagreen;
-  border-radius: 3px;
-  padding: 6px;
 }
 </style>

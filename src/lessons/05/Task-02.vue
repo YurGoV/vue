@@ -1,19 +1,19 @@
 <template>
   <div class="task-section">
-    <div v-for="item in raspberryList" :key="item.id" >
+    <div v-for="rasberry in raspberryList" :key="rasberry.id" >
       <RaspberryCard
-        :id="item.id"
-        :icon="item.imgSrc"
-        :logo="item.logo"
-        :companyTitle="item.companyTitle"
-        :description="item.description"
+        :id="rasberry.id"
+        :icon="rasberry.imgSrc"
+        :logo="rasberry.logo"
+        :companyTitle="rasberry.companyTitle"
+        :description="rasberry.description"
       />
     </div>
   </div>
 </template>
 
 <script>
-import RaspberryCard from './components/raspberryCard.vue'
+import RaspberryCard from './components/02/raspberryCard.vue'
 import { raspberryList } from './data/2_data_raspberry'
 
 export default {
@@ -25,11 +25,6 @@ export default {
       raspberryList
     }
   },
-  // computed: {
-  //   raspberryList() {
-  //     return raspberryList
-  //   }
-  // },
 }
 </script>
 <style scoped>

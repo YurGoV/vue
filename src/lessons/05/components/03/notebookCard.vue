@@ -46,7 +46,7 @@ p {
 }
 button {
   margin-left: 250px;
-  background-color: lightseagreen;
+  background-color: #c0e9e7;
   border-radius: 3px;
   padding: 6px;
 }
