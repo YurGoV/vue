@@ -128,18 +128,15 @@ export default {
   },
   methods: {
     chooseScreen(screen) {
-      // console.log(screen)
       this.screen = screen
     },
     setContactGroup(group) {
       this.newContact.group = group
     },
     setGroupToView(group) {
-      console.log(group, 'groupToView')
       this.groupToView = group
     },
     addContact() {
-      console.log('add')
       const id = Date.now()
       this.newContact.id = id
       this.newContact.emails = [this.newContact.emails]

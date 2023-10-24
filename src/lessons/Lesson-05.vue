@@ -1,4 +1,3 @@
-<!-- MyButton.vue -->
 <script setup>
 import Task02 from './05/Task-02.vue'
 import Task03 from './05/Task-03.vue'

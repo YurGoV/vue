@@ -46,7 +46,6 @@ export default {
     addToBasket(id) {
       this.basket.push(id)
       const notebookIndex = notebooksList.findIndex((notebook) => notebook.id === id)
-      console.log(notebookIndex)
       this.notebooksList[notebookIndex].added = true
     }
   },
@@ -54,7 +53,6 @@ export default {
     basketList() {
       if (this.basket.length) {
         const result = this.notebooksList.filter((notebook) => this.basket.includes(notebook.id))
-        console.log(result)
         return result
       } else {
         return null
