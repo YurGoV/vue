@@ -48,7 +48,7 @@
               /><br /><br />
               <label for="email">Email:</label>
               <input
-                v-model="newContact.email"
+                v-model="newContact.emails"
                 type="email"
                 required
                 id="email"
@@ -103,7 +103,7 @@ import ContactItem from './components/07/contact.vue'
 const emptyContactTemplate = {
   first_name: '',
   last_name: '',
-  email: '',
+  emails: '',
   group: 'customers'
 }
 
@@ -139,7 +139,7 @@ export default {
     addContact() {
       const id = Date.now()
       this.newContact.id = id
-      this.newContact.email = [this.newContact.email]
+      this.newContact.emails = [this.newContact.emails]
       this.contacts.push(this.newContact)
 
       this.newContact = { ...emptyContactTemplate }
@@ -168,7 +168,7 @@ export default {
       return !!(
         this.newContact.first_name.length &&
         this.newContact.last_name.length &&
-        this.newContact.email.length &&
+        this.newContact.emails.length &&
         this.newContact.group.length
       )
     },
