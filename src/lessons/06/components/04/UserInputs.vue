@@ -29,7 +29,7 @@ export default {
         this.$emit('update:userAge', value)
       }
     },
-    isName() {
+    nameBgColor() {
       return this.userName.length > 0 ? '#82ce89' : '#d49191'
     },
     ageBgColor() {
@@ -45,7 +45,7 @@ input {
   max-width: 400px;
 }
 .name-bg-color {
-  background: v-bind(isName);
+  background: v-bind(nameBgColor);
 }
 .age-bg-color {
   background: v-bind(ageBgColor);

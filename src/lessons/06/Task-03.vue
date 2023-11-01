@@ -45,6 +45,5 @@ export default {
   padding: 5px;
   min-width: 800px;
   min-height: 180px;
-  /* background-color: #3b3e4e; */
 }
 </style>

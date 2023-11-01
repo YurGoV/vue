@@ -1,5 +1,6 @@
 <template>
   <div class="task-section">
+    <h2>Задача 1.</h2>
     <p>
       Розробити компонент для введення віку користувача (з підтримкою v-model). При заданні
       модифікатора check не допускати введення некоректного віку (вік не може бути більшим за 150).
@@ -8,7 +9,6 @@
     </p>
     <div>
       <CustomInput v-model.check="inputValue" />
-      <!-- <p>{{ inputValue }}</p> -->
       <button @click="reset">reset</button>
     </div>
   </div>
@@ -42,6 +42,5 @@ export default {
   padding: 5px;
   min-width: 800px;
   min-height: 180px;
-  /* background-color: #3b3e4e; */
 }
 </style>

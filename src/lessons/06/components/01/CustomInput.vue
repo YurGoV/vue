@@ -1,5 +1,4 @@
 <template>
-  <!-- <input :value="modelValue" @input="emitValue" type="number" /> -->
   <input
     v-model="value"
     @input="emitValue"
