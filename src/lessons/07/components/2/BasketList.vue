@@ -1,8 +1,11 @@
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 export default {
+  methods: {
+    ...mapActions(['removeFromBasket'])
+  },
   computed: {
-    ...mapGetters(['getBasketList'])
+    ...mapGetters(['getBasketList', 'getTotalBasketCount'])
   }
 }
 </script>
@@ -11,8 +14,12 @@ export default {
   <div>
     <h2>Basket</h2>
     <ul>
-      <li v-for="goods in getBasketList" :key="goods.id">{{ goods.name }}, {{ goods.price }}</li>
+      <li v-for="goods in getBasketList" :key="goods.id">
+        {{ goods.name }}, {{ goods.price }}
+        <button @click="removeFromBasket({ id: goods.id })">remove</button>
+      </li>
     </ul>
+    <p>Total: {{ getTotalBasketCount }}</p>
   </div>
 </template>
 

@@ -74,10 +74,23 @@ export const store = createStore({
         return { id: goods.id, name: goods.name, price: formattedPrice };
       });
     },
+    getTotalBasketCount(state) {
+      if (state.currencyRate === 1) {
+        const totalCount = state.goodsBasket.reduce(
+        (sum, goods) => sum + goods.priceUAH,
+          0,
+        );
+        return `${totalCount} UAH`;
+      }
+      const totalCount = state.goodsBasket.reduce(
+          (sum, goods) => sum + Number((goods.priceUAH * state.currencyRate).toFixed(2)),
+        0,
+      );
+      return `${totalCount} USD`;
+    },
   },
   mutations: {
     setCountSystem(state, payload) {
-      // state.selectedCountSystem = Number(payload.countSystem);
       state.selectedCountSystem = payload.countSystem;
     },
     setCategory(state, payload) {
@@ -87,11 +100,16 @@ export const store = createStore({
       state.currencyRate = payload.currencyRate;
     },
     addToBasket(state, payload) {
-      console.log(payload.id, 'payload id')
       const index = state.goodsList.findIndex((goods) =>
         goods.id === payload.id
       );
       state.goodsBasket.push(state.goodsList[index]);
+    },
+    removeFromBasket(state, payload) {
+      const index = state.goodsBasket.findIndex((goods) =>
+        goods.id === payload.id
+      );
+      state.goodsBasket.splice(index, 1);
     },
   },
   actions: {
@@ -106,6 +124,9 @@ export const store = createStore({
     },
     addToBasket(context, payload) {
       context.commit("addToBasket", payload);
+    },
+    removeFromBasket(context, payload) {
+      context.commit("removeFromBasket", payload);
     },
   },
 });
