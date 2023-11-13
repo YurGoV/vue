@@ -9,16 +9,20 @@ export default {
   },
   computed: {
     ...mapGetters(['categoriesList', 'getCategoryByName'])
+    // selectorBoardColor() {
+    //  return
+    // }
   },
   methods: {
     setCategory(category) {
-      console.log('click')
       this.category = category
+      this.isActiveCategory = category
     }
   },
   data() {
     return {
-      category: null
+      category: null,
+      isActiveCategory: null
     }
   }
 }
@@ -35,6 +39,7 @@ export default {
             name: category.name,
             img: category.img
           }"
+          :isActive="category.name === isActiveCategory"
         />
       </li>
     </ul>
@@ -60,10 +65,4 @@ ul {
   min-width: 800px;
   min-height: 180px;
 }
-/* .selector { */
-/*   display: flex; */
-/*   flex-direction: row; */
-/*   border: 2px solid red; */
-/*   min-width: 1000px; */
-/* } */
 </style>
