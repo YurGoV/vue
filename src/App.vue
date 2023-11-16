@@ -1,7 +1,7 @@
 <script setup>
-import LessonSeven from './lessons/Lesson-07.vue'
+import LessonEight from './lessons/Lesson-08.vue'
 </script>
 
 <template>
-  <LessonSeven />
+  <LessonEight />
 </template>
