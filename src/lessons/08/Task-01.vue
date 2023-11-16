@@ -1,28 +1,25 @@
 <script>
 import { mapGetters } from 'vuex'
-import CategoryItem from './components/CategoryItem.vue'
-import CategoryDetails from './components/CategoryDetails.vue'
+import CategoryItem from './components/task-01/CategoryItem.vue'
+import CategoryDetails from './components/task-01/CategoryDetails.vue'
 export default {
   components: {
     CategoryItem,
     CategoryDetails
   },
+  data() {
+    return {
+      category: null,
+      isActiveCategory: null
+    }
+  },
   computed: {
     ...mapGetters(['categoriesList', 'getCategoryByName'])
-    // selectorBoardColor() {
-    //  return
-    // }
   },
   methods: {
     setCategory(category) {
       this.category = category
       this.isActiveCategory = category
-    }
-  },
-  data() {
-    return {
-      category: null,
-      isActiveCategory: null
     }
   }
 }
@@ -30,7 +27,7 @@ export default {
 
 <template>
   <div class="task-section">
-    <p>Task 1</p>
+    <h2>Task 1</h2>
     <ul>
       <li v-for="category in categoriesList" :key="category.name">
         <CategoryItem

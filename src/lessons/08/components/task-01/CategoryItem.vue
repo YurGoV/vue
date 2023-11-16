@@ -27,22 +27,16 @@ export default {
   flex-direction: column;
   width: 200px;
   height: 200px;
-  /* border: 1px dotted black; */
   border: v-bind(borderStyle);
-
   background-color: white;
   border-radius: 10px;
   margin-left: 5px;
   cursor: pointer;
 }
-.img-thumb {
-  width: 150px;
-  height: 150px;
-}
 .img-thumb > img {
   display: block;
-  height: 100%;
-  width: 100%;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 5px;

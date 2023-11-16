@@ -2,7 +2,7 @@ export const notebooksData = [
   {
     "id": 2451,
     "title": "Lenovo",
-    'img': 'https://content.rozetka.com.ua/goods/images/big_tile/374343936.jpg',
+    "img": "https://content.rozetka.com.ua/goods/images/big_tile/374343936.jpg",
     "manual_url": "https://rozetka.com.ua/ua/notebooks/c80004/producer=lenovo/",
     "category_id": 80004,
     "top_category_id": 80253,
@@ -14,7 +14,7 @@ export const notebooksData = [
     "id": 2437,
     "title": "Acer",
 
-    'img': 'https://content2.rozetka.com.ua/goods/images/big/357256289.jpg',
+    "img": "https://content2.rozetka.com.ua/goods/images/big/357256289.jpg",
     "manual_url": "https://rozetka.com.ua/ua/notebooks/c80004/producer=acer/",
     "category_id": 80004,
     "top_category_id": 80253,
@@ -25,7 +25,7 @@ export const notebooksData = [
   {
     "id": 2444,
     "title": "HP (Hewlett Packard)",
-    'img': 'https://content2.rozetka.com.ua/goods/images/big/196664862.jpg',
+    "img": "https://content2.rozetka.com.ua/goods/images/big/196664862.jpg",
     "manual_url":
       "https://rozetka.com.ua/ua/notebooks/c80004/producer=hp-hewlett-packard/",
     "category_id": 80004,
@@ -37,7 +37,7 @@ export const notebooksData = [
   {
     "id": 2458,
     "title": "Dell",
-    'img': 'https://content1.rozetka.com.ua/goods/images/big/338180961.jpg',
+    "img": "https://content1.rozetka.com.ua/goods/images/big/338180961.jpg",
     "manual_url": "https://rozetka.com.ua/ua/notebooks/c80004/producer=dell/",
     "category_id": 80004,
     "top_category_id": 80253,
@@ -51,7 +51,7 @@ export const phonesData = [
   {
     "id": 19572,
     "title": "Samsung",
-    'img': 'https://content.rozetka.com.ua/goods/images/big/310649358.jpg',
+    "img": "https://content.rozetka.com.ua/goods/images/big/310649358.jpg",
     "manual_url":
       "https://rozetka.com.ua/ua/mobile-phones/c80003/producer=samsung/",
     "category_id": 80003,
@@ -63,7 +63,7 @@ export const phonesData = [
   {
     "id": 20184,
     "title": "Xiaomi",
-    'img': 'https://content1.rozetka.com.ua/goods/images/big/367783308.jpg',
+    "img": "https://content1.rozetka.com.ua/goods/images/big/367783308.jpg",
     "manual_url":
       "https://rozetka.com.ua/ua/mobile-phones/c80003/producer=xiaomi/",
     "category_id": 80003,
@@ -75,7 +75,7 @@ export const phonesData = [
   {
     "id": 20187,
     "title": "Motorola",
-    'img': 'https://content1.rozetka.com.ua/goods/images/big/366854239.jpg', 
+    "img": "https://content1.rozetka.com.ua/goods/images/big/366854239.jpg",
     "manual_url":
       "https://rozetka.com.ua/ua/mobile-phones/c80003/producer=motorola/",
     "category_id": 80003,
@@ -87,7 +87,7 @@ export const phonesData = [
   {
     "id": 20190,
     "title": "Nokia",
-    'img': 'https://content.rozetka.com.ua/goods/images/big/355466153.jpg',
+    "img": "https://content.rozetka.com.ua/goods/images/big/355466153.jpg",
     "manual_url":
       "https://rozetka.com.ua/ua/mobile-phones/c80003/producer=nokia/",
     "category_id": 80003,
@@ -102,7 +102,7 @@ export const tabletsData = [
   {
     "id": 19575,
     "title": "Apple iPad",
-    'img': 'https://content2.rozetka.com.ua/goods/images/big/224009737.jpg',
+    "img": "https://content2.rozetka.com.ua/goods/images/big/224009737.jpg",
     "manual_url": "https://rozetka.com.ua/ua/tablets/c130309/producer=apple/",
     "category_id": 130309,
     "top_category_id": 80253,
@@ -113,7 +113,7 @@ export const tabletsData = [
   {
     "id": 19578,
     "title": "Samsung",
-    'img': 'https://content.rozetka.com.ua/goods/images/big/23699426.jpg',
+    "img": "https://content.rozetka.com.ua/goods/images/big/23699426.jpg",
     "manual_url": "https://rozetka.com.ua/ua/tablets/c130309/producer=samsung/",
     "category_id": 130309,
     "top_category_id": 80253,
@@ -124,7 +124,7 @@ export const tabletsData = [
   {
     "id": 19581,
     "title": "Lenovo",
-    'img': 'https://content1.rozetka.com.ua/goods/images/big/339482754.jpg',
+    "img": "https://content1.rozetka.com.ua/goods/images/big/339482754.jpg",
     "manual_url": "https://rozetka.com.ua/ua/tablets/c130309/producer=lenovo/",
     "category_id": 130309,
     "top_category_id": 80253,
@@ -135,7 +135,7 @@ export const tabletsData = [
   {
     "id": 19584,
     "title": "Xiaomi",
-    'img': 'https://content2.rozetka.com.ua/goods/images/big/378193168.jpg',
+    "img": "https://content2.rozetka.com.ua/goods/images/big/378193168.jpg",
     "manual_url": "https://rozetka.com.ua/ua/tablets/c130309/producer=xiaomi/",
     "category_id": 130309,
     "top_category_id": 80253,
@@ -149,7 +149,7 @@ export const pcData = [
   {
     "id": 2871,
     "title": "Монітори",
-    'img': 'https://content1.rozetka.com.ua/goods/images/big/366948863.jpg',
+    "img": "https://content1.rozetka.com.ua/goods/images/big/366948863.jpg",
     "manual_url": "https://hard.rozetka.com.ua/ua/monitors/c80089/",
     "category_id": 80089,
     "top_category_id": 80253,
@@ -160,7 +160,7 @@ export const pcData = [
   {
     "id": 2885,
     "title": "Клавіатури та миші",
-    'img': 'https://content.rozetka.com.ua/goods/images/big/317221561.jpg',
+    "img": "https://content.rozetka.com.ua/goods/images/big/317221561.jpg",
     "manual_url": "https://hard.rozetka.com.ua/ua/keybords-mice/c80255/",
     "category_id": 80255,
     "top_category_id": 80253,
@@ -171,7 +171,7 @@ export const pcData = [
   {
     "id": 2934,
     "title": "Комп'ютерні колонки",
-    'img': 'https://content.rozetka.com.ua/goods/images/big/288123808.jpg',
+    "img": "https://content.rozetka.com.ua/goods/images/big/288123808.jpg",
     "manual_url": "https://rozetka.com.ua/ua/kompyuternie-kolonki/c4671536/",
     "category_id": 4671536,
     "top_category_id": 4627949,
@@ -182,7 +182,7 @@ export const pcData = [
   {
     "id": 2906,
     "title": "Програмне забезпечення",
-    'img': 'https://content2.rozetka.com.ua/goods/top/original/228453341.jpg',
+    "img": "https://content2.rozetka.com.ua/goods/top/original/228453341.jpg",
     "manual_url": "https://soft.rozetka.com.ua/ua/",
     "category_id": 80019,
     "top_category_id": 80253,
@@ -208,5 +208,107 @@ export const categoriesList = [
   {
     name: "PC",
     img: "https://content.rozetka.com.ua/goods/images/big/320078659.jpg",
+  },
+];
+
+export const carsData = [
+  {
+    title: "Subaru Legacy LIMITED",
+    image:
+      "https://ua-auto.com.ua/wp-content/uploads/2021/11/IMG_3078-1024x768.jpg",
+    description: "Продам Subaru Legacy LIMITED 2016г.",
+    link: "https://ua-auto.com.ua/autos/subaru-legacy-limited/",
+    year: 2016,
+    bodyType: "Sedan",
+    manufacturer: "Subaru",
+    price: 13300,
+  },
+  {
+    title: "Toyota Avalon XLE HYBRID",
+    image:
+      "https://ua-auto.com.ua/wp-content/uploads/2021/10/IMG_2666-1024x768.jpg",
+    description: "Продам Toyota Avalon XLE HYBRID 2014г.",
+    link: "https://ua-auto.com.ua/autos/toyota-avalon-xle-hybrid/",
+    year: 2014,
+    bodyType: "Sedan",
+    manufacturer: "Toyota",
+    price: 16800,
+  },
+  {
+    title: "Toyota Scion iM",
+    image:
+      "https://ua-auto.com.ua/wp-content/uploads/2021/10/IMG_2713-1024x768.jpg",
+    description: "Продам Toyota Scion iM 2015г.",
+    link: "https://ua-auto.com.ua/autos/toyota-scion-im/",
+    year: 2015,
+    bodyType: "Hatchback",
+    manufacturer: "Toyota",
+    price: 11800,
+  },
+  {
+    title: "Subaru Forester Premium",
+    image:
+      "https://ua-auto.com.ua/wp-content/uploads/2021/09/IMG_2520-1024x768.jpg",
+    description: "Продам Subaru Forester Premium 2016г.",
+    link: "https://ua-auto.com.ua/autos/subaru-forester-premium-2/",
+    year: 2016,
+    bodyType: "SUV",
+    manufacturer: "Subaru",
+    price: 15200,
+  },
+  {
+    title: "Subaru Forester Premium",
+    image:
+      "https://ua-auto.com.ua/wp-content/uploads/2021/08/IMG_2054-1024x768.jpg",
+    description: "Продам Subaru Forester Premium 2019г.",
+    link: "https://ua-auto.com.ua/autos/subaru-forester-premium/",
+    year: 2019,
+    bodyType: "SUV",
+    manufacturer: "Subaru",
+    price: 21900,
+  },
+  {
+    title: "Toyota Prius",
+    image:
+      "https://ua-auto.com.ua/wp-content/uploads/2021/08/IMG_2092-1024x768.jpg",
+    description: "Продам Toyota Prius 2017г.",
+    link: "https://ua-auto.com.ua/autos/toyota-prius/",
+    year: 2017,
+    bodyType: "Hatchback",
+    manufacturer: "Toyota",
+    price: 14900,
+  },
+  {
+    title: "Volkswagen Jetta SE",
+    image:
+      "https://ua-auto.com.ua/wp-content/uploads/2021/10/IMG_2615-1024x768.jpg",
+    description: "Продам Volkswagen Jetta SE 2012г.",
+    link: "https://ua-auto.com.ua/autos/volkswagen-jetta-se/",
+    year: 2012,
+    bodyType: "Sedan",
+    manufacturer: "Volkswagen",
+    price: 8900,
+  },
+  {
+    title: "Nissan Teana",
+    image:
+      "https://ua-auto.com.ua/wp-content/uploads/2021/08/IMG_2258-1024x768.jpg",
+    description: "Продам Nissan Teana OFFICIAL 2010г.",
+    link: "https://ua-auto.com.ua/autos/nissan-teana/",
+    year: 2010,
+    bodyType: "Sedan",
+    manufacturer: "Nissan",
+    price: 9300,
+  },
+  {
+    title: "Renault City K-ZE",
+    image:
+      "https://ua-auto.com.ua/wp-content/uploads/2021/04/IMG_9608-1024x768.jpg",
+    description: "Продам Renault City K-ZE 2019г.",
+    link: "https://ua-auto.com.ua/autos/renault-city-k-ze/",
+    year: 2019,
+    bodyType: "Hatchback",
+    manufacturer: "Renault",
+    price: 14700,
   },
 ];
