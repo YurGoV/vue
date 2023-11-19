@@ -12,15 +12,15 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/vue/goods/:goodsName",
+    path: "/vue/goods/:goodsName?",
     name: "goodsView",
     component: GoodsView,
   },
-  {
-    path: "/vue/goods/",
-    name: "goodsList",
-    component: GoodsList,
-  },
+  // {
+  //   path: "/vue/goods/",
+  //   name: "goodsList",
+  //   component: GoodsList,
+  // },
   {
     path: "/vue/payments",
     name: "paymentRules",

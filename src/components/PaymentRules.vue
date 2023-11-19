@@ -8,7 +8,7 @@ export default {
   <div style="tasks">
     <h2>To be sure to receive a goods:</h2>
     <p>pay directly to shop</p>
-    <p>& donate my coffee please )</p>
+    <p>& make donate for my coffee please )</p>
   </div>
 </template>
 
