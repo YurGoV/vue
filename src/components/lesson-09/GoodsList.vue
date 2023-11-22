@@ -3,12 +3,12 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'GoodsList',
   computed: {
-    ...mapGetters('lesson10', ['categoriesList'])
+    ...mapGetters('lesson09', ['categoriesList'])
   },
   methods: {
     onCategoryClick(name) {
       this.$router.push({
-        name: 'goodsView',
+        name: 'GoodsView',
         params: {
           goodsName: name
         }
@@ -19,9 +19,9 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div >
     <p>Goods List:</p>
-    <ul>
+    <ul class="list">
       <li
         @click="onCategoryClick(category.name)"
         v-for="category in categoriesList"
@@ -41,5 +41,10 @@ li {
 li:hover {
   color: green;
   cursor: pointer;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 </style>

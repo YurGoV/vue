@@ -7,10 +7,10 @@ export default {
 <template>
   <div style="tasks">
     <h1>Vue.js course homeworks</h1>
-    <h2>To Check:</h2>
+    <h2>Ready for review:</h2>
     <ul>
-      <li><router-link to="/lesson-10">Lesson 10</router-link></li>
-      <!-- Add more links for other lessons as needed -->
+      <li><router-link to="/lesson-9">Lesson 9</router-link></li>
+      <!-- <li><router-link to="/lesson-10">Lesson 10</router-link></li> -->
     </ul>
   </div>
 </template>

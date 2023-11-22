@@ -1,11 +1,9 @@
-// import { createStore } from "vuex";
-import { notebooksData } from "../../data/lesson10";
-import { phonesData } from "../../data/lesson10";
-import { tabletsData } from "../../data/lesson10";
-import { pcData } from "../../data/lesson10";
-import { categoriesList } from "../../data/lesson10";
+import { notebooksData } from "../../data/lesson09";
+import { phonesData } from "../../data/lesson09";
+import { tabletsData } from "../../data/lesson09";
+import { pcData } from "../../data/lesson09";
+import { categoriesList } from "../../data/lesson09";
 
-// export const store = createStore({
 export default {
   namespaced: true,
 
