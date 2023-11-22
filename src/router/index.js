@@ -1,40 +1,59 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../components/Home.vue";
-import GoodsView from "../components/GoodsView.vue";
-import GoodsList from "../components/GoodsList.vue";
-import PaymentRules from "../components/PaymentRules.vue";
-import ContactsView from "../components/Contacts.vue";
+import Home from "../views/Home.vue";
+import LessonTen from "../views/LessonTen.vue";
+import LessonTenHome from "../components/lesson-10/Home.vue";
+import GoodsView from "../components/lesson-10/GoodsView.vue";
+import Payments from "../components/lesson-10/PaymentRules.vue";
+import Contacts from "../components/lesson-10/Contacts.vue";
 
 const routes = [
   {
-    path: "/vue",
-    name: "home",
-    component: HomeView,
+    path: "/",
+    name: "HomeView",
+    component: Home,
   },
+
   {
-    path: "/vue/goods/:goodsName?",
-    name: "goodsView",
-    component: GoodsView,
+    path: "/lesson-10",
+    name: "LessonTen",
+    component: LessonTen,
+    children: [
+      {
+        path: "",
+        name: "LessonTenHome",
+        component: LessonTenHome,
+      },
+      {
+        path: "goods",
+        name: "GoodsView",
+        component: GoodsView,
+      },
+      {
+        path: "payments",
+        name: "Payments",
+        component: Payments,
+      },
+      {
+        path: "contacts",
+        name: "Contacts",
+        component: Contacts,
+      },
+    ],
   },
   // {
-  //   path: "/vue/goods/",
-  //   name: "goodsList",
-  //   component: GoodsList,
+  //   path: "/lesson-11",
+  //   name: "Lesson11",
+  //   component: () =>
+  //     import(/* webpackChunkName: "lesson-11" */ "../views/Lesson11.vue"),
   // },
-  {
-    path: "/vue/payments",
-    name: "paymentRules",
-    component: PaymentRules,
-  },
-  {
-    path: "/vue/contacts",
-    name: "contacts",
-    component: ContactsView,
-  },
+  // Add more routes for other lessons as needed
 ];
 
+const base = import.meta.env.BASE_URL;
+
 const router = createRouter({
-  history: createWebHistory(),
+  // history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(base),
   routes,
 });
 

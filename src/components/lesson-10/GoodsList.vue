@@ -3,7 +3,7 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'GoodsList',
   computed: {
-    ...mapGetters(['categoriesList'])
+    ...mapGetters('lesson10', ['categoriesList'])
   },
   methods: {
     onCategoryClick(name) {

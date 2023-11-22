@@ -1,30 +1,21 @@
-<script setup></script>
-
 <template>
-  <nav>
-    <router-link to="/vue">Home</router-link> | <router-link to="/vue/goods">Goods</router-link> |
-    <router-link to="/vue/payments">Payments Rules</router-link> |
-    <router-link to="/vue/contacts">Contacts</router-link>
-  </nav>
-  <router-view />
+  <div id="app">
+    <router-view />
+  </div>
 </template>
 
-<style scoped>
-nav {
-  padding: 10px;
+<script>
+export default {
+  name: 'App'
 }
-nav a {
-  font-weight: bold;
-  color: #5757d5;
-  text-decoration: none; /* Remove underlines from links */
-}
-nav a:hover {
-  font-weight: bold;
-  color: blue;
-  text-decoration: none; /* Remove underlines from links */
-}
+</script>
 
-nav a.router-link-exact-active {
-  color: green;
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 </style>
