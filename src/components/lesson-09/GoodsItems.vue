@@ -3,7 +3,7 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'GoodsItems',
   computed: {
-    ...mapGetters(['goodsByCategory']),
+    ...mapGetters('lesson09', ['goodsByCategory']),
     goodsCategoryName() {
       return this.$route.params.goodsName
     },
@@ -14,7 +14,7 @@ export default {
   methods: {
     goToMain() {
       this.$router.push({
-        name: 'home'
+        name: 'LessonTenHome'
       })
     }
   }
@@ -39,7 +39,7 @@ export default {
       </ul>
     </div>
 
-    <p @click="goToMain" class="go-to-main">Go to main</p>
+    <p @click="goToMain" class="go-to-main">Go to lesson home page</p>
   </div>
 </template>
 

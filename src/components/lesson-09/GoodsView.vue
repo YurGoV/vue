@@ -9,7 +9,7 @@ export default {
     GoodsItems
   },
   computed: {
-    ...mapGetters(['goodsByCategory']),
+    ...mapGetters('lesson09', ['goodsByCategory']),
     goodsCategoryName() {
       return this.$route.params.goodsName
     }
@@ -24,12 +24,8 @@ export default {
       this.goodsCategory = newGoodsCategoryName
     }
   },
-  methods: {
-    goToMain() {
-      this.$router.push({
-        name: 'home'
-      })
-    }
+  mounted() {
+    this.goodsCategory = this.goodsCategoryName
   }
 }
 </script>
