@@ -2,28 +2,34 @@
 import { mapGetters } from 'vuex'
 import GoodsList from './GoodsList.vue'
 import GoodsItems from './GoodsItems.vue'
+
 export default {
   name: 'GoodsView',
+
   components: {
     GoodsList,
     GoodsItems
   },
+
+  data() {
+    return {
+      goodsCategory: null
+    }
+  },
+
   computed: {
     ...mapGetters('lesson09', ['goodsByCategory']),
     goodsCategoryName() {
       return this.$route.params.goodsName
     }
   },
-  data() {
-    return {
-      goodsCategory: null
-    }
-  },
+
   watch: {
     goodsCategoryName(newGoodsCategoryName) {
       this.goodsCategory = newGoodsCategoryName
     }
   },
+
   mounted() {
     this.goodsCategory = this.goodsCategoryName
   }
