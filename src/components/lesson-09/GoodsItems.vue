@@ -2,6 +2,7 @@
 import { mapGetters } from 'vuex'
 export default {
   name: 'GoodsItems',
+  
   computed: {
     ...mapGetters('lesson09', ['goodsByCategory']),
     goodsCategoryName() {
@@ -11,10 +12,11 @@ export default {
       return this.goodsByCategory(this.goodsCategoryName)
     }
   },
+  
   methods: {
     goToMain() {
       this.$router.push({
-        name: 'LessonTenHome'
+        name: 'LessonNineHome'
       })
     }
   }

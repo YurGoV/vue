@@ -2,9 +2,11 @@
 import { mapGetters } from 'vuex'
 export default {
   name: 'GoodsList',
+
   computed: {
     ...mapGetters('lesson09', ['categoriesList'])
   },
+
   methods: {
     onCategoryClick(name) {
       this.$router.push({
@@ -19,7 +21,7 @@ export default {
 </script>
 
 <template>
-  <div >
+  <div>
     <p>Goods List:</p>
     <ul class="list">
       <li
