@@ -4,9 +4,12 @@ import LessonEleven from "../views/LessonEleven.vue";
 // lazy load:
 const LessonNine = () => import("../views/LessonNine.vue");
 const LessonTen = () => import("../views/LessonTen.vue");
-const lessonNineRoutes = () => import("./routeModules/lesson09Routes");
-const lessonTenRoutes = () => import("./routeModules/lesson10Routes");
+// TODO: not work with:
+// const lessonNineRoutes = () => import("./routeModules/lesson09Routes");
+// const lessonTenRoutes = () => imoprt("./routeModules/lesson10Routes");
 
+import lessonNineRoutes from "./routeModules/lesson09Routes";
+import lessonTenRoutes from "./routeModules/lesson10Routes";
 import lessonElevenRoutes from "./routeModules/lesson11Routes";
 
 const routes = [
