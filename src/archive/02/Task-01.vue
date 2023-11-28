@@ -41,7 +41,6 @@ export default {
       this.isLoggedIn = usersData.find(
         (user) => user.login === this.login && user.password === this.password
       )
-      console.log(this.isLoggedIn)
       this.errorColor =
         !this.isLoggedIn && this.login === favoriteUser
           ? 'custom-error-color'

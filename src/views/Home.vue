@@ -9,9 +9,15 @@ export default {
     <h1>Vue.js course homeworks</h1>
     <h2>Ready for review:</h2>
     <ul>
+      <li><router-link to="/lesson-11">Lesson 11</router-link></li>
+    </ul>
+
+    <h2>Reviewed (needs refartoring)</h2>
+    <ul>
       <li><router-link to="/lesson-9">Lesson 9</router-link></li>
       <li><router-link to="/lesson-10">Lesson 10</router-link></li>
     </ul>
+    <h2>Reviewed (refactored)</h2>
   </div>
 </template>
 
