@@ -78,13 +78,9 @@ export default {
         state.driversList.splice(index, 1);
 
         this.dispatch("lesson11/lesson11Assignments/onEntityDeleteAction", {
-          action: Entities.DRIVERS,
+          entity: Entities.DRIVERS,
           id: driverId,
         });
-        // this.rootDispatch("lesson11Assignments/onEntityDeleteAction", {
-        //   action: Entities.DRIVERS,
-        //   id: driverId,
-        // });
       } else {
         console.error("driver not found");
       }

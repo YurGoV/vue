@@ -53,7 +53,7 @@ export default {
         state.busesList.splice(index, 1);
 
         this.dispatch("lesson11/lesson11Assignments/onEntityDeleteAction", {
-          action: Entities.BUSES,
+          entity: Entities.BUSES,
           id: driverId,
         });
       } else {

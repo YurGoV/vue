@@ -60,14 +60,14 @@ export default {
       }
     },
     onEntityDelete(state, deleteActionData) {
-      const { action, id } = deleteActionData;
+      const { entity, id } = deleteActionData;
       let assignmentIndex = null;
-      if (action === Entities.DRIVERS) {
+      if (entity === Entities.DRIVERS) {
         assignmentIndex = state.assignmentsList.findIndex((assignment) =>
           assignment.driverId === id
         );
         state.assignmentsList.splice(assignmentIndex, 1);
-      } else if (action === Entities.BUSES) {
+      } else if (entity === Entities.BUSES) {
         assignmentIndex = state.assignmentsList.findIndex((assignment) =>
           assignment.driverId === id
         );
