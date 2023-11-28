@@ -1,15 +1,15 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
-import LessonNine from "../views/LessonNine.vue";
-import LessonTen from "../views/LessonTen.vue";
 import LessonEleven from "../views/LessonEleven.vue";
+// lazy load:
+const LessonNine = () => import("../views/LessonNine.vue");
+const LessonTen = () => import("../views/LessonTen.vue");
 
 import lessonNineRoutes from "./routeModules/lesson09Routes";
 import lessonTenRoutes from "./routeModules/lesson10Routes";
 import lessonElevenRoutes from "./routeModules/lesson11Routes";
 
 const routes = [
-  // ... other routes
   {
     path: "/",
     name: "HomeView",
