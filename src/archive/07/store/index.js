@@ -29,7 +29,6 @@ export const store = createStore({
         return fivePointCountedStudents;
       });
       if (state.selectedCategory) {
-        console.log("1");
         const categoryRange = categories[state.selectedCategory];
         return fivePointCountedStudents.filter((student) => {
           return (

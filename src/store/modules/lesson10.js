@@ -13,14 +13,16 @@ export default {
       return [...state.contacts];
     },
   },
-  mutations: {
-    addContact(state, contact) {
-      state.contacts.push(contact);
-    },
-  },
+
   actions: {
     addContact(context) {
       context.commit("addContact");
+    },
+  },
+
+  mutations: {
+    addContact(state, contact) {
+      state.contacts.push(contact);
     },
   },
 };

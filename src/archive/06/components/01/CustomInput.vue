@@ -31,11 +31,9 @@ export default {
       },
       set(value) {
         if (this.modelModifiers.check) {
-          console.log(typeof value, 'check')
           if (value > 150) {
             value = 150
             this.isDisabled = true
-            console.log('150')
           }
         }
         this.$emit('update:modelValue', value)
