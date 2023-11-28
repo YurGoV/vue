@@ -14,7 +14,7 @@
     <p>choose bus:</p>
     <ul>
       <li
-        v-for="( bus, index ) in getBusesList"
+        v-for="(bus, index) in getBusesList"
         @click="onBusClick(bus.id, index)"
         :key="bus.id"
         :class="{ selected: index === selectedBusIndex }"
@@ -28,6 +28,7 @@
       v-for="assignment in getAssignmentsList"
       @click="onAssignmentClick(assignment)"
       :key="assignment.id"
+      class="assignments-items"
     >
       {{ getDriverById(assignment.driverId).name }} =
       {{ getBusById(assignment.busId).number }}
@@ -54,7 +55,11 @@ export default {
   computed: {
     ...mapGetters('lesson11/lesson11Drivers', ['getDriverById']),
     ...mapGetters('lesson11/lesson11Buses', ['getBusById']),
-    ...mapGetters('lesson11/lesson11Assignments', ['getAssignmentsList', 'getBusesList', 'getDriversList'])
+    ...mapGetters('lesson11/lesson11Assignments', [
+      'getAssignmentsList',
+      'getBusesList',
+      'getDriversList'
+    ])
   },
 
   watch: {
@@ -72,9 +77,12 @@ export default {
       deep: true
     }
   },
-  
+
   methods: {
-    ...mapActions('lesson11/lesson11Assignments', ['addAssignmentAction', 'deleteAssignmentAction']),
+    ...mapActions('lesson11/lesson11Assignments', [
+      'addAssignmentAction',
+      'deleteAssignmentAction'
+    ]),
 
     onDriverClick(id, index) {
       this.assignmentPair.driverId = id
@@ -103,7 +111,7 @@ export default {
       const index = this.assignments.findIndex((assignment) => assignment.id === id)
       this.assignments.splice(index, 1)
     }
-  },
+  }
 }
 </script>
 
@@ -122,5 +130,8 @@ li.selected {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+}
+.assignments-items:hover {
+  border-color: red;
 }
 </style>
