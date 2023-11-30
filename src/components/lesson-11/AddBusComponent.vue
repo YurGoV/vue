@@ -1,11 +1,3 @@
-<template>
-  <div class="edit">
-    <input v-model="newBusData.number" @keydown="onKeyDown" type="text" placeholder="number" />
-    <input v-model="newBusData.capacity" type="number" placeholder="capacity" />
-  </div>
-  <ActionBtn @click="addBus" :icon="saveIcon" />
-</template>
-
 <script>
 import { mapActions } from 'vuex'
 import ActionBtn from './common/ActionBtn.vue'
@@ -47,6 +39,14 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div class="edit">
+    <input v-model="newBusData.number" @keydown="onKeyDown" type="text" placeholder="number" />
+    <input v-model="newBusData.capacity" type="number" placeholder="capacity" />
+  </div>
+  <ActionBtn @click="addBus" :icon="saveIcon" />
+</template>
 
 <style scoped>
 li {

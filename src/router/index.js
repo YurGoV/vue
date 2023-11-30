@@ -1,7 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
-import LessonEleven from "../views/LessonEleven.vue";
+import LessonTwelve from "../views/LessonTwelve.vue";
+import lessonTwelveRoutes from "./routeModules/lesson12Routes";
+
 // lazy load:
+const LessonEleven = () => import("../views/LessonEleven.vue");
 const LessonNine = () => import("../views/LessonNine.vue");
 const LessonTen = () => import("../views/LessonTen.vue");
 // TODO: not work with:
@@ -35,6 +38,12 @@ const routes = [
     name: "LessonEleven",
     component: LessonEleven,
     children: lessonElevenRoutes,
+  },
+  {
+    path: "/lesson-12",
+    name: "LessonTwelve",
+    component: LessonTwelve,
+    children: lessonTwelveRoutes,
   },
 ];
 

@@ -1,11 +1,3 @@
-<template>
-  <div class="edit">
-    <input v-model="newDriverData.name" @keydown="onKeyDown" type="text" placeholder="name" />
-    <input v-model="newDriverData.exp" type="number" placeholder="experience" />
-  </div>
-  <ActionBtn @click="addDriver" :icon="saveIcon" />
-</template>
-
 <script>
 import { mapActions } from 'vuex'
 import ActionBtn from './common/ActionBtn.vue'
@@ -40,6 +32,14 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div class="edit">
+    <input v-model="newDriverData.name" @keydown="onKeyDown" type="text" placeholder="name" />
+    <input v-model="newDriverData.exp" type="number" placeholder="experience" />
+  </div>
+  <ActionBtn @click="addDriver" :icon="saveIcon" />
+</template>
 
 <style scoped>
 li {

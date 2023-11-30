@@ -1,21 +1,3 @@
-<template>
-  <div class="section">
-    <p>filter:</p>
-    <input v-model="nameFilter" @keydown="onKeyDown" type="text" placeholder="name" />
-    <input v-model="expMinFilter" class="input-exp" type="number" placeholder="exp-min" />
-    <input v-model="expMaxFilter" class="input-exp" type="number" placeholder="exp-max" />
-    <p>drivers(name / experience):</p>
-    <ul>
-      <li v-for="driver in driversList" :key="driver.id">
-        {{ driver.name }} - {{ driver.exp }}
-        <ActionBtn @click="editDriver(driver.id)" :icon="editIcon" />
-        <ActionBtn @click="deleteDriver(driver.id)" :icon="deleteIcon" />
-      </li>
-    </ul>
-    <button @click="addDriver">Add Driver</button>
-  </div>
-</template>
-
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import ActionBtn from './common/ActionBtn.vue'
@@ -70,6 +52,24 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div class="section">
+    <p>filter:</p>
+    <input v-model="nameFilter" @keydown="onKeyDown" type="text" placeholder="name" />
+    <input v-model="expMinFilter" class="input-exp" type="number" placeholder="exp-min" />
+    <input v-model="expMaxFilter" class="input-exp" type="number" placeholder="exp-max" />
+    <p>drivers(name / experience):</p>
+    <ul>
+      <li v-for="driver in driversList" :key="driver.id">
+        {{ driver.name }} - {{ driver.exp }}
+        <ActionBtn @click="editDriver(driver.id)" :icon="editIcon" />
+        <ActionBtn @click="deleteDriver(driver.id)" :icon="deleteIcon" />
+      </li>
+    </ul>
+    <button @click="addDriver">Add Driver</button>
+  </div>
+</template>
 
 <style scoped>
 li {

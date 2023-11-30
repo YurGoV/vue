@@ -1,11 +1,3 @@
-<template>
-  <div class="edit">
-    <input v-model="newBusData.number" type="text" />
-    <input v-model="newBusData.capacity" type="number" />
-  </div>
-  <ActionBtn @click="editBus" :icon="saveIcon" />
-</template>
-
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import ActionBtn from './common/ActionBtn.vue'
@@ -54,6 +46,14 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div class="edit">
+    <input v-model="newBusData.number" type="text" />
+    <input v-model="newBusData.capacity" type="number" />
+  </div>
+  <ActionBtn @click="editBus" :icon="saveIcon" />
+</template>
 
 <style scoped>
 li {

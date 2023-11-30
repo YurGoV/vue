@@ -1,41 +1,3 @@
-<template>
-  <div class="section">
-    <p>choose driver:</p>
-    <ul>
-      <li
-        v-for="(driver, index) in getDriversList"
-        @click="onDriverClick(driver.id, index)"
-        :key="driver.id"
-        :class="{ selected: index === selectedDriverIndex }"
-      >
-        {{ driver.name }} - {{ driver.exp }}
-      </li>
-    </ul>
-    <p>choose bus:</p>
-    <ul>
-      <li
-        v-for="(bus, index) in getBusesList"
-        @click="onBusClick(bus.id, index)"
-        :key="bus.id"
-        :class="{ selected: index === selectedBusIndex }"
-      >
-        {{ bus.number }} = {{ bus.capacity }}
-      </li>
-    </ul>
-  </div>
-  <ul>
-    <li
-      v-for="assignment in getAssignmentsList"
-      @click="onAssignmentClick(assignment)"
-      :key="assignment.id"
-      class="assignments-items"
-    >
-      {{ getDriverById(assignment.driverId).name }} =
-      {{ getBusById(assignment.busId).number }}
-    </li>
-  </ul>
-</template>
-
 <script>
 import { mapGetters, mapActions } from 'vuex'
 
@@ -114,6 +76,44 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div class="section">
+    <p>choose driver:</p>
+    <ul>
+      <li
+        v-for="(driver, index) in getDriversList"
+        @click="onDriverClick(driver.id, index)"
+        :key="driver.id"
+        :class="{ selected: index === selectedDriverIndex }"
+      >
+        {{ driver.name }} - {{ driver.exp }}
+      </li>
+    </ul>
+    <p>choose bus:</p>
+    <ul>
+      <li
+        v-for="(bus, index) in getBusesList"
+        @click="onBusClick(bus.id, index)"
+        :key="bus.id"
+        :class="{ selected: index === selectedBusIndex }"
+      >
+        {{ bus.number }} = {{ bus.capacity }}
+      </li>
+    </ul>
+  </div>
+  <ul>
+    <li
+      v-for="assignment in getAssignmentsList"
+      @click="onAssignmentClick(assignment)"
+      :key="assignment.id"
+      class="assignments-items"
+    >
+      {{ getDriverById(assignment.driverId).name }} =
+      {{ getBusById(assignment.busId).number }}
+    </li>
+  </ul>
+</template>
 
 <style scoped>
 li {
