@@ -8,8 +8,5 @@ export default {
     lesson11Assignments,
     lesson11Drivers,
     lesson11Buses,
-    // assignments: lesson11Assignments,
-    // buses: lesson11Buses,
-    // drivers: lesson11Drivers,
   },
 };

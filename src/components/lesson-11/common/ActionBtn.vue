@@ -7,6 +7,7 @@ export default {
   }
 }
 </script>
+
 <template>
   <div class="btn">
     <img class="icon" :src="icon" alt="edit icon" />

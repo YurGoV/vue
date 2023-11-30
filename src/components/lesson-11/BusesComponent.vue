@@ -1,18 +1,3 @@
-<template>
-  <div class="section">
-    <p>buses:</p>
-    <p>number - capacity (peoples)</p>
-    <ul>
-      <li v-for="bus in getAllBusesList" :key="bus.id">
-        {{ bus.number }} = {{ bus.capacity }}
-        <ActionBtn @click="editBus(bus.id)" :icon="editIcon" />
-        <ActionBtn @click="deleteBus(bus.id)" :icon="deleteIcon" />
-      </li>
-    </ul>
-    <button @click="addBus">Add Bus</button>
-  </div>
-</template>
-
 <script>
 import { mapGetters, mapActions } from 'vuex'
 
@@ -53,6 +38,21 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div class="section">
+    <p>buses:</p>
+    <p>number - capacity (peoples)</p>
+    <ul>
+      <li v-for="bus in getAllBusesList" :key="bus.id">
+        {{ bus.number }} = {{ bus.capacity }}
+        <ActionBtn @click="editBus(bus.id)" :icon="editIcon" />
+        <ActionBtn @click="deleteBus(bus.id)" :icon="deleteIcon" />
+      </li>
+    </ul>
+    <button @click="addBus">Add Bus</button>
+  </div>
+</template>
 
 <style scoped>
 li {
