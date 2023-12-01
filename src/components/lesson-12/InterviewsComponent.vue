@@ -26,7 +26,7 @@ export default {
     isDataForNewInterview() {
       return (
         this.getWorkersWighoutInterviewList.length &&
-        this.getCandidatesWighoutInterviewList &&
+        this.getCandidatesWighoutInterviewList.length &&
         Object.keys(this.getFreeForInterviewDays).length
       )
     }
@@ -92,6 +92,9 @@ export default {
       </select>
 
       <button @click="addInterview" :disabled="isButtonDisabled">add interview</button>
+    </div>
+    <div v-else>
+      <p> No data to add new interviews </p>
     </div>
   </div>
 </template>
