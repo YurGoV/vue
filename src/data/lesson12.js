@@ -22,9 +22,17 @@ export const days = {
   5: "friday",
 };
 
-export const interviews = [{
-  id: 1,
-  day: 1,
-  workerId: 2,
-  candidateId: 3,
-}];
+export const interviews = [
+  {
+    id: 1,
+    day: 2,
+    workerId: 2,
+    candidateId: 3,
+  },
+  {
+    id: 2,
+    day: 2,
+    workerId: 3,
+    candidateId: 1,
+  },
+];

@@ -21,6 +21,14 @@ export default {
 
     isButtonDisabled() {
       return !(this.selectedWorkerId && this.selectedCandidateId && this.selectedDayId)
+    },
+
+    isDataForNewInterview() {
+      return (
+        this.getWorkersWighoutInterviewList.length &&
+        this.getCandidatesWighoutInterviewList &&
+        Object.keys(this.getFreeForInterviewDays).length
+      )
     }
   },
   methods: {
@@ -55,27 +63,36 @@ export default {
         {{ interview.day }}
       </li>
     </ul>
-    <select v-model="selectedWorkerId" name="group">
-      <option v-for="worker in getWorkersWighoutInterviewList" :key="worker.id" :value="worker.id">
-        {{ worker.name }}
-      </option>
-    </select>
-    <select v-model="selectedCandidateId" name="group">
-      <option
-        v-for="candidate in getCandidatesWighoutInterviewList"
-        :key="candidate.id"
-        :value="candidate.id"
-      >
-        {{ candidate.name }}
-      </option>
-    </select>
-    <select v-model="selectedDayId" name="group">
-      <option v-for="(value, key) in getFreeForInterviewDays" :key="key" :value="key">
-        {{ value }}
-      </option>
-    </select>
+    <div v-if="isDataForNewInterview" class="new-interviews-setup">
+      <label for="worker">Select Worker:</label>
+      <select v-model="selectedWorkerId" name="worker">
+        <option
+          v-for="worker in getWorkersWighoutInterviewList"
+          :key="worker.id"
+          :value="worker.id"
+        >
+          {{ worker.name }}
+        </option>
+      </select>
+      <label for="candidate">Select Candidate:</label>
+      <select v-model="selectedCandidateId" name="candidate">
+        <option
+          v-for="candidate in getCandidatesWighoutInterviewList"
+          :key="candidate.id"
+          :value="candidate.id"
+        >
+          {{ candidate.name }}
+        </option>
+      </select>
+      <label for="day">Select Day:</label>
+      <select v-model="selectedDayId" name="day">
+        <option v-for="(value, key) in getFreeForInterviewDays" :key="key" :value="key">
+          {{ value }}
+        </option>
+      </select>
 
-    <button @click="addInterview" :disabled="isButtonDisabled">add interview</button>
+      <button @click="addInterview" :disabled="isButtonDisabled">add interview</button>
+    </div>
   </div>
 </template>
 
@@ -96,6 +113,11 @@ button {
   margin-top: 10px;
 }
 .section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.new-interviews-setup {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
