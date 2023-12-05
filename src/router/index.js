@@ -1,49 +1,56 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
-import LessonTwelve from "../views/LessonTwelve.vue";
-import lessonTwelveRoutes from "./routeModules/lesson12Routes";
-
-// lazy load:
-const LessonEleven = () => import("../views/LessonEleven.vue");
-const LessonNine = () => import("../views/LessonNine.vue");
-const LessonTen = () => import("../views/LessonTen.vue");
-// TODO: not work with:
-// const lessonNineRoutes = () => import("./routeModules/lesson09Routes");
-// const lessonTenRoutes = () => imoprt("./routeModules/lesson10Routes");
-
-import lessonNineRoutes from "./routeModules/lesson09Routes";
-import lessonTenRoutes from "./routeModules/lesson10Routes";
-import lessonElevenRoutes from "./routeModules/lesson11Routes";
+import store from "../store";
+import HomeView from "../views/HomeView.vue";
+import SelectLessonsView from "../views/SelectLessonsView.vue";
+import SelectTeachersView from "../views/SelectTeachersView.vue";
+import ScheduleView from "../views/ScheduleView.vue";
+import TeachersView from "../views/TeachersView.vue";
+import LoginView from "../views/LoginView.vue";
+import NotFound from "../views/NotFound.vue";
 
 const routes = [
   {
     path: "/",
-    name: "HomeView",
-    component: Home,
+    component: HomeView,
+    meta: { requireAuth: false },
   },
   {
-    path: "/lesson-9",
-    name: "LessonNine",
-    component: LessonNine,
-    children: lessonNineRoutes,
+    path: "/lessons/select",
+    name: "select-lessons",
+    component: SelectLessonsView,
+    meta: { requireAuth: true },
   },
   {
-    path: "/lesson-10",
-    name: "LessonTen",
-    component: LessonTen,
-    children: lessonTenRoutes,
+    path: "/lessons/:id(\\d*)+",
+    name: "select-teachers",
+    component: SelectTeachersView,
+    props: true,
+    meta: { requireAuth: true },
   },
   {
-    path: "/lesson-11",
-    name: "LessonEleven",
-    component: LessonEleven,
-    children: lessonElevenRoutes,
+    path: "/lessons/:id(\\d*,\\d*)+",
+    name: "schedule",
+    component: ScheduleView,
+    props: true,
+    meta: { requireAuth: false },
   },
   {
-    path: "/lesson-12",
-    name: "LessonTwelve",
-    component: LessonTwelve,
-    children: lessonTwelveRoutes,
+    path: "/login",
+    name: "login",
+    component: LoginView,
+    meta: { requireAuth: false },
+  },
+  {
+    path: "/teachers",
+    name: "teachers",
+    component: TeachersView,
+    meta: { requireAuth: true },
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "NotFound",
+    component: NotFound,
+    meta: { requireAuth: true },
   },
 ];
 
@@ -52,6 +59,17 @@ const base = import.meta.env.BASE_URL;
 const router = createRouter({
   history: createWebHistory(base),
   routes,
+});
+
+router.beforeEach((to) => {
+  const isLoggedIn = store.getters["auth/userLogin"];
+  console.log(isLoggedIn, "isLoggedIn");
+  if (to.meta.requireAuth && !isLoggedIn) {
+    return {
+      name: "login",
+      query: { redirect: to.fullPath },
+    };
+  }
 });
 
 export default router;
