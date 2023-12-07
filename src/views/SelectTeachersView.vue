@@ -23,7 +23,6 @@ export default {
       return this.lessonsByIds(this.id)
     },
     canShowSchedule() {
-      console.log(Object.keys(this.schedule).length)
       return !!Object.keys(this.schedule).length
     }
   },
