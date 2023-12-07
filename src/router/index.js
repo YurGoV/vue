@@ -63,7 +63,6 @@ const router = createRouter({
 
 router.beforeEach((to) => {
   const isLoggedIn = store.getters["auth/userLogin"];
-  console.log(isLoggedIn, "isLoggedIn");
   if (to.meta.requireAuth && !isLoggedIn) {
     return {
       name: "login",
