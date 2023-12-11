@@ -1,14 +1,12 @@
 import { createStore } from "vuex";
-import lessons from "./modules/lessons";
-import teachers from "./modules/teachers";
-import auth from "./modules/auth";
+import goods from "./modules/goods";
+import deliverers from "./modules/deliverers";
 
 export default createStore({
   namespaced: true,
 
   modules: {
-    lessons,
-    teachers,
-    auth,
+    goods,
+    deliverers,
   },
 });
