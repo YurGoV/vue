@@ -4,9 +4,9 @@ import HomeView from "../views/HomeView.vue";
 import GoodsView from "../views/GoodsView.vue";
 import FilteredGoodsView from "../views/FilteredGoodsView.vue";
 import AddGoodsView from "../views/AddGoodsView.vue";
-import DeliverersView from "../views/DeliverersView.vue";
-import ContactsView from "../views/ContactsView.vue";
-import ShoppingRulesView from "../views/ShoppingRulesView.vue";
+const DeliverersView = () => import("../views/DeliverersView.vue");
+const ContactsView = () => import("../views/ContactsView.vue");
+const ShoppingRulesView = () => import("../views/ShoppingRulesView.vue");
 
 const routes = [
   { path: "/", name: "home", component: HomeView },
