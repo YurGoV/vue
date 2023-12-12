@@ -1,0 +1,1 @@
+import{S as t}from"./SlaveMasterPage-768d627b.js";import{_ as o,r as a,o as s,c}from"./index-795b40a3.js";const n={name:"ContactsView",components:{SlaveMasterPage:t}};function _(r,p,i,l,m,d){const e=a("SlaveMasterPage");return s(),c(e)}const u=o(n,[["render",_],["__scopeId","data-v-859e81c7"]]);export{u as default};
